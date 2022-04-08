@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crete+Round&display=swap");
+@import url("./components/alert/alert.css");
+@import url("./styles.css");
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.main-container {
+    margin-top: 1.6rem;
+}
+
+.container-style-development-purpose {
+    display: grid;
+    grid-template-columns: 0.8fr 4fr;
+    grid-template-rows: 50px 1fr;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-body-kaali {
+    margin-top: 64px;
+    overflow: auto;
+    overflow-x: hidden;
+    height:  calc(100vh - 70px);
+    padding: 1rem;
+}
+
+.sidebar-list-kaali {
+    display: flex;
+    justify-self: center;
+    list-style: none;
+    overflow-y: auto;
+    flex-direction: column;
+    height: calc(100vh - 64px);
+    margin-top: 64px;
+    /* background-color: var(--kaali-sidebar-background); */
+    padding: 1rem 0rem;
+    text-transform: capitalize;
+}
+
+.sidebar-list-kaali::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+.sidebar-list-kaali::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-list-kaali::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--kaali-status-available-background);
+}
+
+.sidebar-list-kaali .sidebar-list-items {
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.body-style-development-purpose .sidebar-list-items:hover {
+    color: var(--kaali-status-available-background);
+}
+
+.params {
+    margin: 1rem 0rem;
+}
+
+hr {
+    width: 100%;
+}
+
+.code-box {
+    padding: 1rem;
+}
+
+.code-container {
+    font-family: "Inconsolata", monospace;
+    background-color: var(--kaali-code-container-background);
+    border: 1px solid var(--kaali-border-color);
+    height: auto;
+    max-width: 740px;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    line-height: 30px;
+    position: relative;
+}
+
+.code-wrapper {
+    overflow: auto;
+}
+
+.fa-clipboard.fas {
+    cursor: pointer;
+}
+
+.code-container > pre {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.token.tag {
+    color: #55b5db;
+}
+
+.code {
+    font-family: "Inconsolata", monospace;
+    letter-spacing: 1px;
+}
+
+.code > span {
+    font-family: "Inconsolata", monospace;
+}
+
+.attr {
+    color: #9fca56;
+    margin: 0 4px;
+}
+
+.symbol,
+.slash  {
+    color: #55b5db;
+    margin: 0px 1px;
+}
+
+.lt.symbol,
+.gt.symbol,
+.slash {
+    color: gray;
+    font-weight: bold;
+}
+
+.copy-tooltip {
+    position: absolute;
+    right: 16px;
+}
+
+/* copy-tooltip for Copy text */
+
