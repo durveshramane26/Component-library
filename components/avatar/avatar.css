@@ -1,0 +1,73 @@
+.avatar-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+.avatar.avatar-sm {
+    height: 60px;
+    width: 60px;
+}
+
+.avatar.avatar-md {
+    height: 80px;
+    width: 80px;
+}
+
+.avatar.avatar-lg {
+    height: 100px;
+    width: 100px;
+}
+
+.image-container {
+    position: relative;
+}
+
+.status {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    position: absolute;
+    top: 70%;
+    right: 0.5px;
+}
+
+.status.status-available {
+    background-color: var(--kaali-status-availabe-background);
+    border: 1px solid green;
+}
+
+.status.status-do-not-disturb {
+    background-color: var(--kaali-danger);
+}
+
+.avatar-letter {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: larger;
+    letter-spacing: 1.5px;
+    color: var(--kaali-font-color);
+}
+
+#shade-pink {
+    background-color: var(--kaali-shade-pink);
+}
+
+#shade-blue {
+    background-color: var(--kaali-primary);
+}
+
+#shade-green {
+    background-color: var(--kaali-success);
+}
