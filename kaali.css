@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Crete+Round&display=swap");
 @import url("./components/alert/alert.css");
 @import url("./components/avatar/avatar.css");
+@import url("./components/badge/badge.css");
 @import url("./styles.css");
 
 *,
