@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;600;700&display=swap");
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btn {
+    margin: 1rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 00.2rem;
+    outline: 1px solid transparent;
+    border: 1px solid transparent;
+    font-size: 1.1rem;
+}
+
+.btn:active {
+    transform: translateY(1.2px);
+
+}
+
+.btn-primary {
+    background-color: var(--kaali-primary);
+    color: var(--kaali-font-color);
+}
+
+.btn-primary:focus {
+    border: 1px solid skyblue;
+}
+
+.btn-success {
+    background-color: var(--kaali-success);
+    color: var(--kaali-font-color);
+}
+
+.btn-success:focus {
+    border: 1px solid var(--kaali-status-available-background);
+}
+
+.btn-warning {
+    background-color: #ffae00a4;
+    color: var(--kaali-font-color);
+}
+
+.body-style-development-purpose.light .btn-warning {
+    background-color: #d97706;
+    color: var(--kaali-font-color);
+}
+
+.btn-warning:focus,
+.btn-warning-dark:focus {
+    border: 1px solid yellow;
+}
+
+.btn-danger {
+    background-color: var(--kaali-danger);
+    color: var(--kaali-font-color);
+}
+
+.btn-danger:focus {
+    border: 1px solid pink
+}
+
+.body-style-development-purpose.light .btn-secondary {
+    border: 1px solid var(--kaali-border-color);
+    color: black;
+    background-color: #e2e8f0;
+}
+
+.body-style-development-purpose.light .btn-secondary:focus {
+    border: 1px solid black;
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    border: 1px solid var(--kaali-border-color);
+}
+
+.btn-secondary:focus {
+    border: 1px solid var(--kaali-font-color);
+}
+
+.btn:hover {
+    filter: brightness(90%);
+}
+
+
