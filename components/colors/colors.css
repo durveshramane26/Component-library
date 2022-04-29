@@ -1,0 +1,24 @@
+.color-box {
+    width: 8rem;
+    height: 8rem;
+}
+
+.color-red {
+    background-color: var(--kaali-danger);
+}
+
+.color-blue {
+    background-color: var(--kaali-primary);
+}
+
+.color-green {
+    background-color: var(--kaali-success);
+}
+
+.color-yellow {
+    background-color: var(--kaali-warning);
+}
+
+.color-white {
+    background-color: var(--kaali-font-color);
+}
