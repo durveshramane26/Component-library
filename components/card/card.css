@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
+.card-container {
+    grid-gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minimax(var(--kaali-minimumColumnWidth), 1fr));
+    padding: 1rem;
+    grid-template-rows: minmax(150px, auto);
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(kaali-card-background);
+    transition: background-color 200ms ease-in-out;
+    border-radius: 0.2rem;
+}
+
+.card-image-container {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.card-image {
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3px;
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 3px;
+}
+
+.card-title {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: var(--kaali-font-color);
+}
+
+.card-subtitle {
+    color: #b3b3b3;
+    font-size: smaller;
+}
+
+.card-body:hover {
+    background-color: #101010;
+}
+
+.plain-card-container {
+    grid-gap: 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    padding: 1rem;
+    grid-template-rows: minmax(180px, auto);
+    /* The next rows that will be generated will be set to inimum of 180px and shall expand depending upon the content in it.Thus we use grid-auto-rows */
+    grid-auto-rows: minmax(180px, auto);
+}
+
+.plain-card-fallback-body {
+    background-color: var(--kaali-plain-card-body-background);
+    position: relative;
+    overflow: hidden;
+    /* ye nai kiya toh image body se baher aayegi */
+    border-radius: 0.8rem;
+}
+
+.chakde {
+    background-color: #eb1e32;
+}
+
+.sleep {
+    background-color: #1e3264;
+}
+
+.barbie {
+    background-color: var(--kaali-success);
+}
+
+.plain-card-fallback-image {
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    bottom: 20px;
+    right: 20px;
+    transform: rotate(25deg) translate(31px, 14px);
+    background-color: var(--kaali-plain-card-fallback-image);
+}
+
+.plain-card-title {
+    padding: 1rem;
+    color: var(--kaali-font-color);
+}
+
+/* Horizontal Card */
+.card-horizontal {
+    padding: 1rem;
+}
+
+.card-horizontal-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fills , minmax(250px,1fr));
+    grid-template-rows: minmax(80px, auto);
+    grid-auto-rows: minmax(80px, auto);
+    gap: 24px;
+}
+
+.card-horizontal-body {
+    background-color: var(--kaali-plain-card-body-background);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 80px;
+    transition: background-color 200ms ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 0.2rem;
+}
+
+.card-horizontal-image-container {
+    max-width: 80px;
+}
+
+.card-horizontal-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    color: #b3b3b3;
+    font-weight: 400;
+    font-size: small;
+}
+
+.card-horizontal-title {
+    margin-bottom: 0.5rem;
+}
+
+.play-button {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    background-color: #1db954;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-right: 10px;
+    visibility: hidden;
+    transition: visibility 300ms ease-in-out;
+}
+
+.fas.fa-play  {
+    font-size: x-small;
+}
+
+.card-horizontal-body:hover {
+    background-color: black;
+}
+
+.card-horizontal-body:hover .play-button {
+    visibility: visible;
+    -webkit-animation: slide-top 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: slide-top 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+/* Card Ecommerce */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+  }
+  
+  
+  .container-ecommerce {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, auto));
+  
+    gap: 10px;
+    margin: 1rem auto;
+  }
+  .card.card-ecommerce {
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
+    padding-bottom: 1rem;
+    position: relative;
+  }
+  
+  .card-image-wrapper {
+    width: 100%;
+  }
+  .card-image-ecommerce {
+    /* width: 280px; */
+    width: 100%;
+    height: auto;
+  }
+  .card-content-ecommerce {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 1rem 1rem 0rem 1rem;
+  }
+  hr {
+    margin: 0.2rem;
+  }
+  .card-subtitle {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .product-price-details {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .product-mrp {
+    text-decoration: line-through;
+  }
+  
+  .product-discount {
+    font-weight: 600;
+    color: red;
+  }
+  
+  .tag.tag-bestSeller {
+    position: absolute;
+    top: 15px;
+    background-color: #111827;
+    color: white;
+    padding: 0rem 1rem;
+  }
+  .glow {
+    background: #fff;
+    width: 15px;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    -webkit-animation: flow 1.5s linear infinite;
+    -moz-animation: flow 1.5s linear infinite;
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg); /*for mozilla browsers*/
+  
+    animation: flow 1.5s linear infinite;
+    transform: skew(20deg);
+  
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 1) 1%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    border-left: 1px solid #fff;
+  }
+  
+  @-webkit-keyframes flow {
+    0% {
+      left: -20px;
+      opacity: 0;
+    }
+    50% {
+      left: 60%;
+      opacity: 0.3;
+    }
+    100% {
+      left: 90%;
+      opacity: 0;
+    }
+  }
+  @keyframes flow {
+    0% {
+      left: -20px;
+      opacity: 0;
+    }
+    50% {
+      left: 60%;
+      opacity: 0.3;
+    }
+    100% {
+      left: 90%;
+      opacity: 0;
+    }
+  }
+  
+  .icon {
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    opacity: 0;
+    fill: red;
+  }
+  .icon-heart {
+    left: 50%;
+    margin-left: -25px;
+    top: 50%;
+    margin-top: -50%;
+  }
+  
+  .icon.like {
+    animation: 2s like-heart-animation ease-in-out forwards;
+  }
+  
+  @keyframes like-heart-animation {
+    0%,
+    to {
+      opacity: 0;
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    15% {
+      opacity: 0.9;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+    30% {
+      -webkit-transform: scale(0.95);
+      transform: scale(0.95);
+    }
+    45%,
+    80% {
+      opacity: 0.9;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  .card-ecommerce .fa-heart {
+    font-size: 1.2rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    /*   background-color:#ccc; */
+    border-radius: 50%;
+    padding: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
+    cursor: pointer;
+    color: #bbb;
+  }
+  
+  .fa-heart.red {
+    -webkit-animation: heartbeat 1.5s ease-in-out 1 both;
+    animation: heartbeat 1.5s ease-in-out 1 both;
+    color: red;
+  }
+  
+  
+  @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+      transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+      transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+      transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-transform-origin: center center;
+      transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+      transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+      transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+      transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+      animation-timing-function: ease-out;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    html {
+      font-size: 80%;
+    }
+  
+    .card-container {
+      grid-template-columns: 50% 50%;
+      width: 100%;
+      gap: 12px;
+    }
+    .card.card-ecommerce {
+      width: 100%;
+    }
+    .card-content {
+      flex-wrap: wrap;
+      padding: 0.2rem 0.2rem 0rem 0.5rem;
+    }
+    .product-price-details {
+      flex-wrap: wrap;
+    }
+  
+    .card-image-ecommerce,
+    .card-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .container-ecommerce {
+      grid-template-columns: 50% 50%;
+      width: 100%;
+      gap: 1px;
+    }
+  }
+  
+  @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px);
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px);
+    }
+    100% {
+      -webkit-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+  }

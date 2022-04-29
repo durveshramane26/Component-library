@@ -4,7 +4,9 @@
 @import url("./components/avatar/avatar.css");
 @import url("./components/badge/badge.css");
 @import url("./components/button/button.css");
-@import url("./styles.css");
+@import url("./components/card/card.css");
+@import url("./components/carousel/carousel.css");
+@import url("styles.css");
 
 *,
 *::after,
