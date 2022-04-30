@@ -1,0 +1,126 @@
+.form {
+    margin: 0 auto;
+    width: 60%;
+    padding: 1rem;
+}
+
+.form-container{
+    border: 1px solid var(--kaali-border-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem 5rem;
+}
+
+.form-row {
+    margin-bottom: 2rem;
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+}
+
+.form .input {
+    font-size: var(--kaali-font-regular);
+    padding-top: 1rem;
+    background-color: transparent;
+    color: var(--kaali-font-color);
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+    border-radius: 2px;
+    height: 100%;
+    width: 100%;
+}
+
+.body-style-development-purpose.light .form .input {
+    font-size: var(--kaali-font-regular);
+    padding-top: 1rem;
+    background-color: transparent;
+    color: var(--kaali-main-background);
+    border: 1px solid transparent;
+    outline: 1px solid transparent;
+    border-radius: 2px;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.form label {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    pointer-events: none;
+    border-bottom: 1px solid var(--kaali-font-color);
+    color: var(--kaali-font-color);
+}
+
+.body-style-development-purpose.light .form label {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    pointer-events: none;
+    border-bottom: 1px solid var(--kaali-main-background);
+    color: var(--kaali-main-background);
+
+}
+
+.form label::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid var(--kaali-primary);
+    left: 0;
+    bottom: -2px;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.content-name {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: all 0.3s ease;
+    padding-top: 0.8rem;
+}
+
+.form .input:focus + .label-name .content-name,
+.form .input:valid + .label-name .content-name,
+.form .input:invalid + .label-name .content-name {
+    transform: translateY(-100%);
+}
+
+.btn.btn-primary.btn-input {
+    width: 100%;
+    margin: 0;
+    max-width: none;
+}
+
+.form .input:focus + .label-name::after, 
+.form .input:valid + .label-name::after {
+    transform: translateX(0%);
+}
+
+.input::placeholder {
+    font-size: var(--kaali-font-regular);
+}
+
+@media only screen and (max-width: 768px) {
+    .form {
+        width: 100%;
+        margin: 0;
+    }
+    .form-container {
+        padding: 1rem;
+        border: 1px solid transparent;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:1200px) {
+    .form-container {
+        padding: 1rem;
+    }
+}
