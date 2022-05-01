@@ -14,7 +14,7 @@
 @import url("./components/toast/toast.css");
 @import url("./components/tooltip/tooltip.css");
 @import url("./components/typography/typography.css");
-@import url("./utilities/flex.css");
+@import url("./utilities/utilities.css");
 @import url("./styles.css");
 
 *,
