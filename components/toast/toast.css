@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;600;700&display=swap");
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.btn-container {
+    display: block;
+}
+
+.toast-primary-container {
+    position: relative;
+    background-color: aliceblue;
+    height: 50px;
+}
+
+.toast {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 0.2rem;
+}
+
+.toast-center {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    width: 320px;
+    bottom: 5%;
+    left: 50%;
+    color: var(--kaali-font-color);
+    padding: 1rem;
+    visibility: hidden;
+    z-index: 32;
+}
+
+.toast-success {
+    background-color: var(--kaali-success);
+}
+
+.toast-failure {
+    background-color: var(--kaali-danger);
+}
+
+.toast-primary {
+    background-color: var(--kaali-primary);
+}
+
+.toast-content {
+    padding: 0rem 0.5rem;
+}
+
+.fa.fa-check-circle {
+    margin-right: 0.5rem;
+}
+
+.fas.fa-info-circle {
+    margin-right: 0.5rem;
+}
+
+.fas.fa-exclamation-triangle {
+    margin-right: 0.5rem;
+}
+
+.fade-out-bottom {
+    -webkit-animation: fade-out-bottom 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: fade-out-bottom 0.7s cubic-bezier (0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes fade-out-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out-bottom {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 480) {
+    .toast-center {
+        left: 50%;
+        font-size: small;
+        width: 160px;
+        margin-left: -80px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+    .toast-center {
+        left: 50%;
+        margin-left: -110px;
+    }
+}
