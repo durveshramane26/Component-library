@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;600;700&display=swap");
+
+.btn-demo {
+    margin: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    font-family: "Merriweather sans", sans-serif;
+    background-color: #2b2a2a;
+    color: var(--kaali-font-color);
+    outline: none;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.tooltip {
+    position: absolute;
+    width: 70px;
+    padding: 2px;
+    visibility: hidden;
+    border-radius: 2px;
+
+}
+
+.tooltip-top {
+    top: -70%;
+    right: -2%;
+}
+
+.tooltip {
+    color: black;
+    background-color: var(--kaali-font-color);
+}
+
+.body-style-development-purpose.light .tooltip {
+    color: var(--kaali-font-color);
+    background-color: var(--kaali-main-background);
+}
+
+.tooltip-top::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+
+}
+
+.body-style-development-purpose.light .tooltip-top::after {
+    border-color: var(--kaali-main-background) transparent transparent transparent;
+}
+.body-style-development-purpose.light .tooltip-left::after {
+    border-color:  transparent var(--kaali-main-background) transparent transparent;
+}
+.body-style-development-purpose.light .tooltip-right::after {
+    border-color: transparent transparent transparent var(--kaali-font-color) ;
+}
+.body-style-development-purpose.light .tooltip-bottom::after {
+    border-color: transparent transparent var(--kaali-main-background) transparent;
+}
+
+.tooltip.tooltip-top::after {
+    border-color: var(--kaali-font-color) transparent transparent transparent;
+}
+.tooltip.tooltip-left::after {
+    border-color: transparent var(--kaali-font-color) transparent transparent;
+}
+.tooltip.tooltip-right::after {
+    border-color: transparent transparent transparent var(--kaali-font-color);
+}
+.tooltip.tooltip-bottom::after {
+    border-color: transparent transparent var(--kaali-font-color) transparent;
+}
+
+.btn-demo:hover .tooltip {
+    visibility: visible;
+    -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.tooltip-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* left */
+
+.tooltip-left {
+    left: 110%;
+    z-index: 1;
+}
+
+.tooltip-left::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: -7%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-width: 5px;
+    border-style: solid;
+    z-index: 1;
+}
+
+.btn-demo-left-left:hover .tooltip-left {
+    visibility: visible;
+    -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+
+/* right */
+
+.tooltip-right {
+    left: -110%;
+}
+.tooltip-right::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 107.3%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.btn-demo-right-right:hover .tooltip-right {
+    visibility: visible;
+    transform: scale(1);
+    -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1); both;
+    animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+/* bottom */
+.tooltip-bottom {
+    top: 110%;
+}
+.tooltip-bottom::after {
+    content: "";
+    position: absolute;
+    top: -42%;
+    left: 51.6%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+
+}
+
+.btn-demo-bottom:hover .tooltip-bottom {
+    visibility: visible;
+    transform: scale(1);
+    -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes fade-in-fwd {
+    0% {
+      -webkit-transform: translateZ(-80px);
+      transform: translateZ(-80px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-fwd {
+    0% {
+      -webkit-transform: translateZ(-80px);
+      transform: translateZ(-80px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }

@@ -12,6 +12,7 @@
 @import url("./components/modal/modal.css");
 @import url("./components/radio/radio.css");
 @import url("./components/toast/toast.css");
+@import url("./components/tooltip/tooltip.css");
 @import url("./styles.css");
 
 *,
