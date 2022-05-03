@@ -32,7 +32,7 @@
     --kaali-card-background: #191919;
     --kaali-plain-card-body-background: #2b2a2a;
     --kaali-plain-card-fallback-image: #7f7f7f;
-    --kaali-status-availabe-background: #09ff00;
+    --kaali-status-available-background: #09ff00;
     --kaali-light-mode-success: #2e7d32;
     /* Border */
     --kaali-border-color: gray;
@@ -216,10 +216,20 @@ a {
 }
 
 .body-style-development-purpose .active {
-    color: var(--kaali-status-availabe-background);
+    color: var(--kaali-status-available-background);
     font-weight: bold;
     filter: saturate(2.5);
 }
 
+
+/* header */
+
+.header-section {
+    position: relative;
+    padding: 60px 200px 200px;
+    min-height: 100vh;
+    width: 100vw;
+    
+}
 
 
