@@ -18,7 +18,7 @@
 }
 
 .header-primary {
-    font-size: var(--kaali-font-main-header);
+    font-size: var(--kaali-font-primary-header);
 }
 
 .header-secondary {
