@@ -39,7 +39,7 @@
 }
 
 .status.status-available {
-    background-color: var(--kaali-status-availabe-background);
+    background-color: var(--kaali-status-available-background);
     border: 1px solid green;
 }
 
