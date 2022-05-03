@@ -47,6 +47,12 @@
     
     /* card grid width */
     --kaali-minimumColummnWidth: 160px;
+
+    /* size */
+    --kaali-sm: 4px;
+    --kaali-md: 8px;
+    --kaali-lg: 12px;
+
 }
 
 
@@ -71,16 +77,41 @@ body {
     background-color: var(--kaali-font-color);
 }
 
-.body-style-development-purpose a {
+.body-style-development-purpose a{
     color: var(--kaali-font-color);
 }
 
-.body-style-development-purpose.light a {
+.body-style-development-purpose.light a{
+    color: var(--kaali-main-background)
+}
+
+.body-style-development-purpose.light .sidebar-list-kaali a {
     color: var(--kaali-main-background);
+}
+
+.body-style-development-purpose.light .component-link-item-desktop a,
+.body-style-development-purpose.light .brand-kaali a {
+    color: var(--kaali-main-background);
+}
+
+.body-style-development-purpose.light .component-link-item-desktop a:hover {
+    color: var(--kaali-light-mode-success);
+    font-weight: bold;
+    filter: saturate(2.5);
 }
 
 .body-style-development-purpose .component-link-item-desktop a:hover {
     color: var(--kaali-status-availabe-background);
+}
+
+.btn.btn-toggle {
+    color: var(--kaali-status-availabe-background);
+    background-color: rgb(16, 5, 163);
+    /* this color is used only at this place */
+}
+
+.component-link-item-mobile.btn.btn-toggle {
+    display: none;
 }
 
 li {
@@ -91,12 +122,16 @@ a {
     text-decoration: none;
 }
 
-/* Navigation bar */
+::selection {
+    background-color: #7dd3fc;
+}
+
+/* Navigation Bar */
 
 .navbar-kaali {
     height: 4rem;
     width: 100%;
-    box-shadow: 0 3px 20px rgba(0, 0 , 0, 0.2);
+    box-shadow: 0 3px 20px rgba(0 , 0, 0, 0.2);
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -135,58 +170,56 @@ a {
     text-transform: capitalize;
 }
 
+.body-style-development-purpose.light .navbar-ul-kaali {
+    color: var(--kaali-main-background);
+}
+
 .component-link-item-desktop {
     padding: 0 1rem;
+}
+
+.hamburder-kaali div {
+    width: 30px;
+    height: 3px;
+    background-color: var(--kaali-status-availabe-background);
+    margin: 5px;
+}
+
+.body-style-development-purpose.light .hamburder-kaali div {
+    background-color: var(--kaali-light-mode-success);
+    filter: saturate(300%)
+}
+
+.hamburger-kaali {
+    display: none;
+}
+
+.close-menu {
+    display: none;
 }
 
 .navbar-ul-kaali .component-link-item-mobile {
     display: none;
 }
 
-
-/* Header */
-
-.header-section {
-    position: relative;
-    padding: 60px 200px 200px;
-    min-height: 100vh;
-    width: 100vw;
-    background-image: url("https://web-assets.cred.club/_next/assets/images/home-page/video-bg.png");
-    background-attachment: fixed;
-
-}
-
-.header-container {
+.navbar-item-link {
     color: var(--kaali-font-color);
+}
+
+.navbar-item-link:hover {
+    color: var(--kaali-status-availabe-background);
+    font-weight: bold;
+}
+
+.body-style-development-purpose .navbar-acitve {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    margin-top: 100px;
-
 }
 
-.header {
-    font-weight: 600;
-    margin-bottom: 1rem;
+.body-style-development-purpose .active {
+    color: var(--kaali-status-availabe-background);
+    font-weight: bold;
+    filter: saturate(2.5);
 }
 
-.get-started {
-    margin-top: 39px;
-    background-color: var(--kaali-font-color);
-    color: #0f0f0f;
-    padding: 1rem 5rem;
-    font-size: 20px;
-    font-weight: 600;
-    border-radius: 2rem;
-    cursor: pointer;
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: background 500ms ease-in-out
-}
 
-.get-started:hover {
-    transform: scale(1.02);
-    background-position: left bottom;
-}
+
