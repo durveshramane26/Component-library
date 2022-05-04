@@ -3,7 +3,7 @@
 .card-container {
     grid-gap: 24px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minimax(var(--kaali-minimumColumnWidth), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     padding: 1rem;
     grid-template-rows: minmax(150px, auto);
 }
@@ -13,9 +13,13 @@
     justify-content: center;
     flex-direction: column;
     padding: 1rem;
-    background-color: var(kaali-card-background);
+    background-color: var(--kaali-card-background);
     transition: background-color 200ms ease-in-out;
     border-radius: 0.2rem;
+}
+
+.card-ecommerce-item {
+  width: 100%;
 }
 
 .card-image-container {
@@ -25,9 +29,9 @@
 }
 
 .card-image {
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 3px;
+    width: 100%;
+    height: auto;
+    border-radius: 0.2rem;
 }
 .card-content {
     display: flex;
@@ -103,7 +107,7 @@
 
 .card-horizontal-container {
     display: grid;
-    grid-template-columns: repeat(auto-fills , minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fill , minmax(250px,1fr));
     grid-template-rows: minmax(80px, auto);
     grid-auto-rows: minmax(80px, auto);
     gap: 24px;
@@ -123,6 +127,12 @@
 
 .card-horizontal-image-container {
     max-width: 80px;
+}
+
+.card-horizontal-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.2rem;
 }
 
 .card-horizontal-content {
