@@ -63,7 +63,10 @@
     grid-template-rows: minmax(180px, auto);
     /* The next rows that will be generated will be set to inimum of 180px and shall expand depending upon the content in it.Thus we use grid-auto-rows */
     grid-auto-rows: minmax(180px, auto);
+    
 }
+
+
 
 .plain-card-fallback-body {
     background-color: var(--kaali-plain-card-body-background);
@@ -124,6 +127,8 @@
     overflow: hidden;
     border-radius: 0.2rem;
 }
+
+
 
 .card-horizontal-image-container {
     max-width: 80px;
