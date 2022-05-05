@@ -95,66 +95,7 @@ hr {
     padding: 1rem;
 }
 
-.code-container {
-    font-family: "Inconsolata", monospace;
-    background-color: var(--kaali-code-container-background);
-    border: 1px solid var(--kaali-border-color);
-    height: auto;
-    max-width: 740px;
-    padding: 1rem;
-    border-radius: 0.2rem;
-    line-height: 30px;
-    position: relative;
-}
 
-.code-wrapper {
-    overflow: auto;
-}
-
-.fa-clipboard.fas {
-    cursor: pointer;
-}
-
-.code-container > pre {
-    overflow: hidden;
-    display: inline-block;
-}
-
-.token.tag {
-    color: #55b5db;
-}
-
-.code {
-    font-family: "Inconsolata", monospace;
-    letter-spacing: 1px;
-}
-
-.code > span {
-    font-family: "Inconsolata", monospace;
-}
-
-.attr {
-    color: #9fca56;
-    margin: 0 4px;
-}
-
-.symbol,
-.slash  {
-    color: #55b5db;
-    margin: 0px 1px;
-}
-
-.lt.symbol,
-.gt.symbol,
-.slash {
-    color: gray;
-    font-weight: bold;
-}
-
-.copy-tooltip {
-    position: absolute;
-    right: 16px;
-}
 
 
 @media only screen and (max-width: 480px) {
@@ -188,6 +129,9 @@ hr {
     .code-box {
         padding: 1rem 0rem;
     }
-    
+
 }
 
+@media screen and (min-width: 985px) and (max-width: 1200px) {
+
+}
