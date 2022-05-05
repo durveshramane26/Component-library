@@ -156,5 +156,38 @@ hr {
     right: 16px;
 }
 
-/* copy-tooltip for Copy text */
+
+@media only screen and (max-width: 480px) {
+    .container-style-development-purpose {
+        display: block;
+    }
+    .code-box {
+        padding: 1rem 0;
+    }
+
+    .main-body-kaali {
+        padding-left: 1rem;
+        overflow-x: hidden;
+    }
+    .sidebar-container-kaali {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 480px) and (max-width:985px) {
+    .container-style-development-purpose {
+        display: block;
+    }
+    .main-body-kaali {
+        padding: 1rem;
+    }
+    .sidebar-container-kaali {
+        display: none;
+    }
+    .code-box {
+        padding: 1rem 0rem;
+    }
+    
+}
 
