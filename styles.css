@@ -83,7 +83,7 @@ body {
 }
 
 .body-style-development-purpose.light a{
-    color: var(--kaali-main-background)
+    color: var(--kaali-main-background);
 }
 
 .body-style-development-purpose.light .sidebar-list-kaali a {
@@ -106,7 +106,7 @@ body {
 }
 
 .btn.btn-toggle {
-    color: var(--kaali-status-availabe-background);
+    color: var(--kaali-status-available-background);
     background-color: rgb(16, 5, 163);
     /* this color is used only at this place */
 }
@@ -186,9 +186,9 @@ a {
     margin: 5px;
 }
 
-.body-style-development-purpose.light .hamburder-kaali div {
+.body-style-development-purpose.light .hamburger-kaali div {
     background-color: var(--kaali-light-mode-success);
-    filter: saturate(300%)
+    filter: saturate(300%);
 }
 
 .hamburger-kaali {
@@ -218,6 +218,10 @@ a {
 
 .body-style-development-purpose .active {
     color: var(--kaali-status-available-background);
+}
+
+.body-style-development-purpose.light .active {
+    color: var(--kaali-light-mode-success);
     font-weight: bold;
     filter: saturate(2.5);
 }
@@ -267,7 +271,7 @@ a {
     font-weight: 600;
     cursor: pointer;
     letter-spacing: 1;
-    background: linear-gradient(to right, var(--kaali-status-available-background) 50%,
+    background: linear-gradient( to right, var(--kaali-status-available-background) 50%,
     var(--kaali-font-color) 50%);
     background-size: 200% 100%;
     background-position: right bottom;
@@ -347,11 +351,6 @@ a {
     .navbar-ul-kaali .component-link-item-mobile {
         display: block;
         color: var(--kaali-font-color);
-    }
-    .navbar-ul-kaali  {
-        position: fixed;
-        z-index: 3;
-        display: block;
     }
 
     .navbar-kaali {
@@ -484,7 +483,7 @@ a {
     }
 }
 
-@media screen and (min-width:480px) and (max-width: 985px) {
+@media screen and (min-width: 480px) and (max-width: 985px) {
     body {
         overflow-x: hidden;
     }
@@ -517,7 +516,7 @@ a {
     }
     .navbar-ul-kaali {
 
-        width: 100%;;
+        width: 100%;
         display: flex;
         flex-direction: column;
         clip-path: circle(50px at 110% -20%);
@@ -571,7 +570,7 @@ a {
         height: 4px;
     }
 
-    .navbar-ul-kaali::-webkit-scrollbar-track {
+    .navbar-ul-kaali:-webkit-scrollbar-track {
         background: transparent;
     }
 
@@ -580,7 +579,7 @@ a {
         background: var(--kaali-status-available-background);
     }
 
-    .navbar-ul-kaali .component-link-item-desktop {
+    .navbar-ul-kaali .component-link-item-mobile {
         display: block;
     }
 
@@ -596,7 +595,73 @@ a {
 
 @media only screen and (max-height: 500px) {
     .navbar-ul {
-        height: calc(100vh -60px);
+        height: calc(100vh - 60px);
         padding-top: 15rem;
+    }
+}
+
+
+
+
+/* Animations */
+.slide-out-top {
+    -webkit-animation: slide-out-top 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    animation: slide-out-top 1s cubic-bezier(0.55 , 0.085, 0.68, 0.53) both;
+}
+
+@-webkit-keyframes slide-out-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-out-top {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+}
+
+.slide-in-top {
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.94) both;
+}
+
+@-webkit-keyframes slide-in-top {
+    0% {
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-top {
+    0%{
+        -webkit-transform: translateY(-1000px);
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
     }
 }
