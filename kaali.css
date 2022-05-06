@@ -108,7 +108,7 @@ hr {
 
     .main-body-kaali {
         padding-left: 1rem;
-        overflow-x: hidden;
+        overflow-x: auto;
     }
     .sidebar-container-kaali {
         display: none;
