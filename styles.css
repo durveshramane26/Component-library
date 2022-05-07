@@ -382,7 +382,7 @@ a {
 
     .body-style-development-purpose.light .wrapper-navbar {
         color: var(--kaali-navbar-background);
-        background-color: var(--kaali-navbar-background);
+        background-color: var(--kaali-font-color);
     }
 
     .clip-path {
