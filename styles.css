@@ -420,6 +420,9 @@ a {
     .component-link-mobile {
         font-size: 1.5rem;
     }
+    .component-link-mobile-header {
+        font-size: 2rem;
+    }
 
     .component-link-item-mobile.fade {
         opacity: 1;
@@ -576,6 +579,10 @@ a {
 
     .component-link-mobile {
         font-size: 1.5rem;
+    }
+
+    .component-link-mobile-header {
+        font-size: 2rem;
     }
 
     .navbar-ul-kaali:-webkit-scrollbar-track {
