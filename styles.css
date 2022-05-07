@@ -417,6 +417,10 @@ a {
         
     }
 
+    .component-link-mobile {
+        font-size: 1.5rem;
+    }
+
     .component-link-item-mobile.fade {
         opacity: 1;
     }
@@ -568,6 +572,10 @@ a {
     .navbar-ul-kaali::-webkit-scrollbar {
         width:4px;
         height: 4px;
+    }
+
+    .component-link-mobile {
+        font-size: 1.5rem;
     }
 
     .navbar-ul-kaali:-webkit-scrollbar-track {
