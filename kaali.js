@@ -236,6 +236,48 @@ dotsNav?.addEventListener("click", (event) => {
 });
 
 
+//---------------------------------------------------------------
+
+//toast.js
+
+function resetToast(className) {
+    let element = document.querySelector(`.${className}`);
+    element.style.visibility = "visible";
+    setTimeout(() => {
+        document.querySelector(`.${className}`).classList.add("fade-out-bottom");
+    }, 1000);
+    element.classList.remove("fade-out-bottom");
+}
+if (document.querySelector(".btn-primary.btn-toast") != null) {
+    document
+    .querySelector(".btn-primary.btn-toast")
+    .addEventListener("click", () => {
+        resetToast("toast-primary");
+    });
+    let target = document.querySelector(".btn-primary.btn-toast");
+    removeEventListener(target, "click");
+}
+
+function removeEventListener(target, event) {
+    target.removeEventListener(event, () => {});
+}
+
+if (document.querySelector(".btn-success.btn-toast") != null) {
+    document
+    .querySelector(".btn-success.btn-toast")
+    .addEventListener("click", () => {
+        resetToast("toast-success");
+    });
+}
+
+if (document.querySelector(".btn-danger.btn-toast") != null) {
+    document
+    .querySelector(".btn-danger.btn-toast")
+    .addEventListener("click", () => {
+        resetToast("toast-failure");
+    });
+}
+
 
 
 
