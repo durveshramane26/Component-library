@@ -29,6 +29,122 @@ if (hamburgericon != null ) {
     });
 }
 
+//Alert.js 
+// Close danger alert
+
+if(document.querySelector('#btn-danger-close') != null) {
+    document.querySelector('#btn-danger-close').addEventListener("click", () => {
+        let alertbox = document.querySelector(".alert-content.alert-danger");
+        alertbox.classList.add("fade-out-top");
+        setTimeout(() => {
+            if(alertbox.classList.contains("fade-out-top")) {
+                document.querySelector(".alert-content.alert-danger").style.display = "none";
+            }
+        }, 1000);
+        setTimeout(() => {
+            resetDangerAlert();
+            document.querySelector(".alert-content.alert-danger").style.display = "flex";
+        }, 5000);
+       
+        //resertDangerAlert();
+    });
+}
+
+//close Success Alert 
+if (document.querySelector("#btn-success-close") != null) {
+    document.querySelector("#btn-success-close").addEventListener("click", () => {
+        resetSuccessAlert();
+        document
+        .querySelector(".alert-content.alert-success")
+        .classList.add("fade-out-top");
+        setTimeout(() => {
+            //resetSuccessAlert();
+            if(
+                document
+                .querySelector(".alert-content.alert-success")
+                .classList.contains("fade-out-top")
+            ) {
+                document.querySelector(".alert-content.alert-success").style.display = "none";
+            }
+        }, 1000);
+
+        setTimeout(() => {
+            resetSuccessAlert();
+            document.querySelector(".alert-content.alert-success").style.display = "flex";
+        }, 5000);
+    });
+}
+
+//Close info alert
+if (document.querySelector("#btn-info-close") != null) {
+    document.querySelector("#btn-info-close").addEventListener("click", () =>  {
+        document
+        .querySelector(".alert-content.alert-info")
+        .classList.add("fade-out-top");
+        setTimeout(() => {
+            if(
+                document
+                .querySelector(".alert-content.alert-info")
+                .classList.contains("fade-out-top")
+            ) {
+                document.querySelector(".alert-content.alert-info").style.display = "none";
+            }
+        }, 1000);
+
+        setTimeout(() => {
+            resetInfoAlert();
+            document.querySelector(".alert-content.alert-info").style.display = "flex";
+        }, 5000);
+    });
+}
+
+// Close warning alert 
+if (document.querySelector("#btn-warning-close") != null) {
+    document.querySelector("#btn-warning-close").addEventListener("click", () => {
+        document
+        .querySelector(".alert-content.alert-warning")
+        .classList.add("fade-out-top");
+        setTimeout(() => {
+            if (
+                document
+                .querySelector(".alert-content.alert-warning")
+                .classList.contains("fade-out-top")
+            ) {
+                document.querySelector(".alert-content.alert-warning").style.display = "none";
+            }
+        }, 1000);
+
+        setTimeout(() => {
+            resetWarningAlert();
+            document.querySelector(".alert-content.alert-warning").style.display = "flex";
+        }, 5000);
+    });
+}
+
+function resetAlert(className) {
+    let alertbox = document.querySelector(`.${className}`);
+    alertbox.classList.remove("fade-out-top");
+}
+
+function resetDangerAlert() {
+    resetAlert("alert-danger");
+}
+
+function resetSuccessAlert() {
+    resetAlert("alert-success");
+}
+
+function resetInfoAlert() {
+    resetAlert("alert-warning");
+}
+
+function resetWarningAlert() {
+    resetAlert("alert-warning");
+}
+
+//---------------------------------------------------------------
+
+
 
 //Carousel
 const track = document.querySelector(".carousel-track");
