@@ -30,7 +30,7 @@
 .carousel-slide {
     position: absolute;
     top: 0;
-    bottom: 100%;
+    bottom: 0;
     width: 100%;
 }
 
@@ -98,10 +98,12 @@
         height: 120px;
     }
     .carousel-button-left {
-        right: 4px;
+        left: 4px;
+        z-index: 1;
     }
     .carousel-button-right {
         right: 4px;
+        z-index: 1;
     }
     .carousel-indicator {
         width: 8px;
