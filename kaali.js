@@ -238,6 +238,88 @@ dotsNav?.addEventListener("click", (event) => {
 
 //---------------------------------------------------------------
 
+
+//modal.js
+modalIsopen = false;
+if (document.querySelector(".btn.btn-like") != null) {
+    document.querySelector(".btn.btn-like").addEventListener("click", () => {
+        removeFadeOutModal();
+        removeFadeInFromModal();
+        document.querySelector(".modal").style.display = "block";
+        document.querySelector(".modal-bg").classList.add("modal-bg-active");
+        modalIsopen = true;
+
+        if (modalIsopen === true) {
+            document.addEventListener("click", (event) => {
+                /* If you click on modal-close or anything except modal iteself and open modal button close the modal */
+                if (event.target.matches("#btn-modal-close") || !event.target.closest("modal, .btn.btn-like"))
+                {
+                    document.querySelector(".modal").style.display = "none";
+                    removeFadeInFromModal();
+                    document
+                    .querySelector(".modal-bg")
+                    .classList.remove("modal-bg-active");
+                    modalIsopen = false;
+                }
+            });
+        }
+    });
+}
+
+function removeFadeInFromModal() {
+    document.querySelector(".modal").classList.remove("fade-in");
+}
+
+function removeFadeOutModal() {
+    document.querySelector(".modal").classList.remove("fade-out-top");
+}
+
+//close modal 
+
+if (document.querySelector("#btn-modal-close") != null) {
+    document.querySelector("#btn-modal-close").addEventListener("click", () => {
+        removeFadeInFromModal();
+        document.querySelector(".modal-bg").classList.remove("modal-bg-active");
+
+        let alertbox = document.querySelector(".modal");
+        if (alert != null) {
+            alertbox.classList.add("fade-out-top");
+            setTimeout(() => {
+                if (alertbox.classList.contains(".fade-out-top")) {
+                    document.querySelector(".modal").style.display = "none";
+                }
+            }, 1500);
+        
+        }
+    });
+
+    document
+    .querySelector("#collection-btn-done")
+    .addEventListener("click", () => {
+        removeFadeOutModal();
+        removeFadeInFromModal();
+        let alertbox = document.querySelector(".modal");
+        document.querySelector(".modal-bg").classList.remove("modal-bg-active");
+        if (alertbox != null) {
+            document.querySelector(".modal").classList.add("fade-out-top");
+            setTimeout(() => {
+                if(alertbox.classList.contains("fade-out-top")) {
+                    document.querySelector(".modal").style.display = "none";
+                }
+            }, 1500);
+        }
+        let container = document.querySelector(".container");
+        if (container) container.style.backgroundColor = "#2F3136";
+        
+    });
+}
+
+
+
+
+
+
+//---------------------------------------------------------------
 //toast.js
 
 function resetToast(className) {
