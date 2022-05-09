@@ -160,13 +160,13 @@
 /* red checkbox */
 .checkboxRed-label input:checked ~ .checkmark {
     background-color: red;
-    color: var(--font-color);
+    color: white;
     border-radius: 50%;
     height: 34px;
     width: 34px;
 }
 
-.checkboxedRed-label .checkmark::after {
+.checkboxRed-label .checkmark::after {
     width: 7px;
     height: 12px;
     border: solid white;
@@ -192,6 +192,6 @@
     outline: none;
     border: none;
 }
-.checkboxBlack-label:hover input ~ .checkmark {
+.checkboxRed-label:hover input ~ .checkmark {
     background-color: rgb(177, 14 ,14);
 }
