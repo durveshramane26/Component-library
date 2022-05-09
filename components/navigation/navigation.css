@@ -34,3 +34,26 @@
     color: #296f8d;
     font-weight: 500;
 }
+
+@media all and (max-width: 633px) {
+    .nav-header {
+        font-size: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    .nav-list > li {
+        font-size: 0.8rem;
+    }
+
+    .nav-list {
+        flex: 2 1;
+    }
+}
+
+@media all and (max-width: 900px) and (min-width: 634px) {
+    .nav-header {
+        flex: 1 1;
+        color: #4d6e7c;
+        padding-left: 1.8rem;
+    }
+}
