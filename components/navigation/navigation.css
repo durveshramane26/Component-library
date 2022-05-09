@@ -1,0 +1,36 @@
+.navigation {
+    position: relative;
+    height: 100px;
+    width: 90%;
+    margin: 0 auto;
+}
+.nav-bar {
+    display: flex;
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+    padding: 1rem 0;
+}
+
+.nav-header {
+    flex: 1 1;
+    color: #4d6e7c;
+    padding-left: 5rem;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    flex: 1 1;
+    justify-content: space-around;
+}
+
+.nav-list>li {
+    color: #3CA1CD;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-list > li:hover {
+    color: #296f8d;
+    font-weight: 500;
+}

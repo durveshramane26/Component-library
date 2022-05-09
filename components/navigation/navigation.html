@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="black" />
     <link rel="icon" type="image/ico" href="../../assets/images/kali-icon.ico" />
+    <link href="../../kaali.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="../../kaali.css" rel="stylesheet" />
 
-
-    <title>Kaali UI | radio</title>
+    <title>Kaali UI | Navigation</title>
 </head>
 
 <body class="body-style-development-purpose">
@@ -38,6 +37,7 @@
                 </div>
             </div>
 
+
             <nav class="navbar-ul-kaali">
                 <ul class="wrapper-navbar">
                     <li class="component-link-item-desktop">
@@ -49,12 +49,11 @@
                     <li class="component-link-item-desktop">
                         <a href="../../index.html#foot">about</a>
                     </li>
-                    <li class="component-link-item-desktop">
 
+                    <li class="component-link-item-desktop">
                         <button class="btn btn-toggle" id="theme-toggler">
                             <i class="fa-solid fa-sun" id="dark-icon"></i>
                         </button>
-
                     </li>
                     <li class="component-link-item-mobile">
                         <a href="../../kaali.html" class="component-link-mobile-header">get started</a>
@@ -72,7 +71,7 @@
                         <a href="../button/button.html" class="component-link-mobile" id="component-tooltip">button</a>
                     </li>
                     <li class="component-link-item-mobile">
-                        <a href="../card/card.html" class="component-link-mobile" id="component-card">card</a>
+                        <a href="#" class="component-link-mobile active" id="component-card">card</a>
                     </li>
                     <li class="component-link-item-mobile">
                         <a href="../carousel/carousel.html" class="component-link-mobile"
@@ -86,16 +85,17 @@
                         <a href="../colors/colors.html" class="component-link-mobile" id="component-colors">colors</a>
                     </li>
                     <li class="component-link-item-mobile">
-                        <a href="../input/input.html" class="component-link-mobile" id="component-badge">input</a>
+                        <a href="#inputlink" class="component-link-mobile" id="component-badge">input</a>
                     </li>
                     <li class="component-link-item-mobile">
                         <a href="../modal/modal.html" class="component-link-mobile" id="component-button">modal</a>
                     </li>
                     <li class="component-link-item-mobile">
-                        <a href="../navigation/navigation.html" class="component-link-mobile" id="component-button">navigation</a>
+                        <a href="../navigation/navigation.html" class="component-link-mobile"
+                            id="component-button">navigation</a>
                     </li>
                     <li class="component-link-item-mobile">
-                        <a href="#" class="component-link-mobile active" id="component-radio">radio</a>
+                        <a href="../radio/radio.html" class="component-link-mobile" id="component-radio">radio</a>
                     </li>
                     <li class="component-link-item-mobile">
                         <a href="../toast/toast.html" class="component-link-mobile" id="component-input">toast</a>
@@ -110,7 +110,6 @@
                 </ul>
             </nav>
         </header>
-
 
         <div class="sidebar-container-kaali">
             <ul class="sidebar-list-kaali">
@@ -130,8 +129,8 @@
                     <li class="sidebar-list-items">button</li>
                 </a>
 
-                <a href="../card/card.html">
-                    <li class="sidebar-list-items">card</li>
+                <a href="#">
+                    <li class="sidebar-list-items active">card</li>
                 </a>
 
                 <a href="../carousel/carousel.html">
@@ -159,8 +158,8 @@
                     <li class="sidebar-list-items">navigation</li>
                 </a>
 
-                <a href="#">
-                    <li class="sidebar-list-items active">radio</li>
+                <a href="../radio/radio.html">
+                    <li class="sidebar-list-items">radio</li>
                 </a>
 
                 <a href="../toast/toast.html">
@@ -178,54 +177,36 @@
         </div>
 
         <div class="main-body-kaali">
-            <div class="header header-secondary">radio</div>
-            <hr class="alert-hr" />
-            <div class="radio">
-                <div class="d-flex jc-space-around">
-                    <label class="checkbox-label checkboxBlack-label">
-                        <input type="radio" name="itemColor" />
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="checkbox-label checkboxRed-label">
-                        <input type="radio" name="itemColor" />
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="checkbox-label checkboxGreen-label">
-                        <input type="radio" name="itemColor" />
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="checkbox-label checkboxBlue-label">
-                        <input type="radio" name="itemColor" />
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="checkbox-label checkboxWhite-label">
-                        <input type="radio" name="itemColor" checked="checked" />
-                        <span class="checkmark"></span>
-                    </label>
+            <div class="main-container" id="navigationlink">
+                <div class="header header-secondary">navigation</div>
+                <hr class="alert-hr" />
+                <div class="navigation">
+                    <nav class="nav-bar">
+                        <h1 class="nav-header">Company Title</h1>
+                        <ul class="nav-list">
+                            <li>Home</li>
+                            <li>Products</li>
+                            <li>Blog</li>
+                            <li>Tools</li>
+                            <li>About</li>
+                        </ul>
+                    </nav>
                 </div>
 
+                <!-- code box for navigation -->
+                <div class="code-box">
+                    <iframe
+                        src="https://carbon.now.sh/embed?bg=rgba%280%2C2%2C6%2C1%29&t=seti&wt=none&l=htmlmixed&width=513&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%2520%253Cnav%2520class%253D%2522nav-bar%2522%253E%250A%2520%2520%2520%2520%253Ch1%2520class%253D%2522nav-header%2522%253E%250A%2520%2520%2520%2520%2520%2520Company%2520Title%250A%2520%2520%2520%253C%252Fh1%253E%250A%2520%2520%2520%2520%2520%2520%2520%253Cul%2520class%253D%2522nav-list%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%253EHome%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%253EProducts%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%253EBlog%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%253ETools%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%253Cli%253EAbout%253C%252Fli%253E%250A%2520%2520%2520%2520%2520%2520%2520%253C%252Ful%253E%250A%2520%253C%252Fnav%253E"
+                        style="width: 513px; height: 314px; border:0; transform: scale(1); overflow:hidden;"
+                        sandbox="allow-scripts allow-same-origin">
+                    </iframe>
+                </div>
             </div>
-
-            <!-- code box for radio checkbox -->
-            <div class="codebox">
-                <iframe
-                    src="https://carbon.now.sh/embed?bg=rgba%280%2C2%2C6%2C1%29&t=seti&wt=none&l=htmlmixed&width=513&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Fira+Code&fs=14px&lh=152%25&si=false&es=2x&wm=false&code=%253Cdiv%2520class%253D%2522radio%2522%253E%250A%2520%2520%253Cdiv%2520class%253D%2522d-flex%2520jc-space-around%2522%253E%250A%2520%2520%2520%2520%253Clabel%2520class%253D%2522checkbox-label%2520checkboxBlack-label%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cinput%2520type%253D%2522radio%2522%2520name%253D%2522itemColor%2522%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cspan%2520class%253D%2522checkmark%2522%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fspan%253E%250A%2520%2520%2520%2520%253C%252Flabel%253E%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520%253Clabel%2520class%253D%2522checkbox-label%2520checkboxRed-label%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cinput%2520type%253D%2522radio%2522%2520name%253D%2522itemColor%2522%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cspan%2520class%253D%2522checkmark%2522%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fspan%253E%250A%2520%2520%2520%2520%253C%252Flabel%253E%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520%253Clabel%2520class%253D%2522checkbox-label%2520checkboxGreen-label%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cinput%2520type%253D%2522radio%2522%2520name%253D%2522itemColor%2522%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cspan%2520class%253D%2522checkmark%2522%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fspan%253E%250A%2520%2520%2520%2520%253C%252Flabel%253E%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520%253Clabel%2520class%253D%2522checkbox-label%2520checkboxBlue-label%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cinput%2520type%253D%2522radio%2522%2520name%253D%2522itemColor%2522%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Cspan%2520class%253D%2522checkmark%2522%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fspan%253E%250A%2520%2520%2520%2520%253C%252Flabel%253E%250A%2520%2520%2520%2520%250A%2520%2520%2520%2520%253Clabel%2520class%253D%2522checkbox-label%2520checkboxWhite-label%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cinput%2520type%253D%2522radio%2522%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520name%253D%2522itemColor%2522%2520%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520checked%253D%2522checked%2522%2520%250A%2520%2520%2520%2520%2520%2520%252F%253E%250A%2520%2520%2520%2520%2520%2520%253Cspan%2520class%253D%2522checkmark%2522%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fspan%253E%250A%2520%2520%2520%2520%253C%252Flabel%253E%250A%2520%2520%253C%252Fdiv%253E%250A%253C%252Fdiv%253E%250A"
-                    style="width: 513px; height: 846px; border:0; transform: scale(1); overflow:hidden;"
-                    sandbox="allow-scripts allow-same-origin">
-                </iframe>
-
-            </div>
-
         </div>
-
-
     </div>
+    <script src="../../kaali.js"></script>
+
 
 </body>
-<script src="../../kaali.js"></script>
 
 </html>
