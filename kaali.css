@@ -116,10 +116,11 @@ hr {
     .code-box {
         padding: 1rem 0;
     }
-
+   
     .main-body-kaali {
         padding-left: 1rem;
         overflow-x: auto;
+    
     }
     .sidebar-container-kaali {
         display: none;
